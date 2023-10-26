@@ -149,5 +149,6 @@ function reset_stats(){
     localStorage.setItem('fq_high-score', 0);
     localStorage.setItem('stats_played-rounds', 0);
     localStorage.setItem('stats_total-score', 0);
+    stats();
     }
 }
