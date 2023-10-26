@@ -145,7 +145,9 @@ function exit_stats(){
 }
 
 function reset_stats(){
+    if(confirm('Möchtest du alle deine Stats löschen?')){
     localStorage.setItem('fq_high-score', 0);
     localStorage.setItem('stats_played-rounds', 0);
     localStorage.setItem('stats_total-score', 0);
+    }
 }
