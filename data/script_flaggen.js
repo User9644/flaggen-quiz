@@ -93,18 +93,16 @@ function reset(){
         let total = localStorage.getItem('stats_total-score');
         localStorage.setItem('stats_total-score', parseInt(total) + points);
 
-        if(points>0){
-
+        if(points>0){
         let played = localStorage.getItem('stats_played-rounds');
         localStorage.setItem('stats_played-rounds', parseInt(played) + 1);
-
+        }
         flags = new randomFlag(list);
         points = 0;
 
         alert('Ende!');
         reset();
         return;
-        }
     }
 
     document.getElementById('flagge').src = right.link;
