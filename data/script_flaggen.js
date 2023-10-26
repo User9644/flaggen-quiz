@@ -98,11 +98,12 @@ function reset(){
         localStorage.setItem('stats_played-rounds', parseInt(played) + 1);
         }
         flags = new randomFlag(list);
-        points = 0;
-
-        alert('Ende!');
         reset();
-        return;
+        if(points>0){
+            points = 0;
+            alert('Ende!');
+            return;
+        }
     }
 
     document.getElementById('flagge').src = right.link;
