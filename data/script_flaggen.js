@@ -118,7 +118,7 @@ function reset(){
     if((localStorage.getItem('fq_high-score')<points)&&(document.getElementById('hard_mode').checked)){
         localStorage.setItem('fq_high-score', points);
     }
-}, 200);
+}, 500);
 }
 
 flags = new randomFlag(list);
