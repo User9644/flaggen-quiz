@@ -88,7 +88,8 @@ function reset(){
     answers = new randomFlag(list);
 
     right = flags.getRandom();
-
+    setTimeout(() => {
+        
     if(right==undefined){// jede flaggen wurde erraten
         let total = localStorage.getItem('stats_total-score');
         localStorage.setItem('stats_total-score', parseInt(total) + points);
@@ -117,6 +118,7 @@ function reset(){
     if((localStorage.getItem('fq_high-score')<points)&&(document.getElementById('hard_mode').checked)){
         localStorage.setItem('fq_high-score', points);
     }
+}, 1000);
 }
 
 flags = new randomFlag(list);
