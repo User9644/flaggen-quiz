@@ -89,7 +89,7 @@ function reset(){
 
     right = flags.getRandom();
         
-    if((right==undefined)&&(points>0)){// jede flaggen wurde erraten
+    if(right==undefined){// jede flaggen wurde erraten
         let total = localStorage.getItem('stats_total-score');
         localStorage.setItem('stats_total-score', parseInt(total) + points);
 
@@ -97,8 +97,6 @@ function reset(){
 
         let played = localStorage.getItem('stats_played-rounds');
         localStorage.setItem('stats_played-rounds', parseInt(played) + 1);
-
-        }
 
         flags = new randomFlag(list);
         points = 0;
