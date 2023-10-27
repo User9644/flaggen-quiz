@@ -5,5 +5,5 @@
   "background_color": "#303030",
   "display": "fullscreen",
   "scope": "/",
-  "start_url": "/index.html"
+  "start_url": "h/index.html"
 }
