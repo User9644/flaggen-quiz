@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./data/style.css">
+    <script src="./data/script_flaggen.js"></script>
+    <script src="./data/random.js"></script>
+    <script src="./data/misc.js"></script>
+    <title>Flaggenquiz</title>
+</head>
+<body>
+    <div id="header" class="header">
+        <a id="stats_a" href="javascript:stats()"><img id="stats" src="./imgs/stats.png" alt="Stats"></a>
+        </div><label class="switch">
+        <input id="hard_mode" checked type="checkbox">
+        <span class="slider round"></span>
+        </label></div>
+    </div>
+    <div class="quiz" id="flaggen_quiz">
+        <img id="flagge" src="" alt="Flagge nicht geladen">
+        <table id="antwort">
+            <tr><td><button id="1" onclick="click(1)"></button></td><td><button id="2" onclick="click(2)"></button></td></tr>
+            <tr><td><button id="3" onclick="click(3)"></button></td><td><button id="4" onclick="click(4)"></button></td></tr>
+            <tr><td><button id="5" onclick="click(5)"></button></td><td><button id="6" onclick="click(6)"></button></td></tr>
+            <tr><td><button id="7" onclick="click(7)"></button></td><td><button id="8" onclick="click(8)"></button></td></tr>
+            <tr><td><button id="9" onclick="click(9)"></button></td><td><button id="10" onclick="click(10)"></button></td></tr>
+        </table>
+        <p id="points"></p>
+    </div>
+    <div id="_stats">
+        <h3>Stats</h3>
+        <table>
+            <tr class="stats_tr"><td>Highscore</td><td id="stats_high-score"></td></tr>
+            <tr class="stats_tr"><td>Runden gespielt</td><td id="stats_played-rounds"></td></tr>
+            <tr class="stats_tr"><td>Durchschnitt Score</td><td id="stats_ave-score"></td></tr>
+        </table>
+        <button onclick="reset_stats()">Reset</button>
+    </div>
+</body>
+</html>
