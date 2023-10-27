@@ -81,29 +81,29 @@ function click(id){
 function reset(){
     localStorage.setItem('fq_hard-core', document.getElementById('hard_mode').checked)
 
-    document.getElementById('points').innerHTML = points;
+    document.getElementById('points').innerHTML = 'Richtig: ' + points;
 
     right_answer_position = random.int(1, 10);
 
     answers = new randomFlag(list);
 
-    right = flags.getRandom();
-        
+    right = flags.getRandom();
+
+    answers.array.splice(answers.array.indexOf(right));
+
     if(right==undefined){// jede flaggen wurde erraten
         let total = localStorage.getItem('stats_total-score');
         localStorage.setItem('stats_total-score', parseInt(total) + points);
 
-        if(points>0){
-        let played = localStorage.getItem('stats_played-rounds');
-        localStorage.setItem('stats_played-rounds', parseInt(played) + 1);
-        }
         flags = new randomFlag(list);
-        reset();
         if(points>0){
+            let played = localStorage.getItem('stats_played-rounds');
+            localStorage.setItem('stats_played-rounds', parseInt(played) + 1);
             points = 0;
-            alert('Ende!');
-            return;
+            alert('Ende!');
         }
+        reset();
+        return;
     }
 
     document.getElementById('flagge').src = right.link;
@@ -147,10 +147,10 @@ function exit_stats(){
 }
 
 function reset_stats(){
-    if(confirm('Möchtest du alle deine Stats löschen?')){
-    localStorage.setItem('fq_high-score', 0);
-    localStorage.setItem('stats_played-rounds', 0);
-    localStorage.setItem('stats_total-score', 0);
-    stats();
+    if(confirm('Alle Stats löschen?')){
+        localStorage.setItem('fq_high-score', 0);
+        localStorage.setItem('stats_played-rounds', 0);
+        localStorage.setItem('stats_total-score', 0);
+        stats();
     }
 }
