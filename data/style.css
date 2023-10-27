@@ -126,8 +126,8 @@ button{
 }
 #points{
     position: absolute;
-    left: 8px;
-    top: 8px;
+    left: 450px;
+    top: 380px;
     font-size: xx-large;
 }
 #_stats{
@@ -137,6 +137,16 @@ button{
     width: 200px;
     height: 200px;
     display: none;
+}
+#_stats button{
+    position: relative;
+    top: 10px;
+}
+#points{
+    position: absolute;
+    left: 40px;
+    top: 0px;
+    font-size: xx-large;
 }
 #_stats p, #_stats h3{
     text-align: center;
