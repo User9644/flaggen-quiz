@@ -147,6 +147,7 @@ button{
     left: 40px;
     top: 0px;
     font-size: xx-large;
+    font-family: 'Open Sans';
 }
 #_stats p, #_stats h3{
     text-align: center;
