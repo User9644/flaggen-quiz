@@ -112,6 +112,7 @@ button{
     border-radius: 10px;
     border-style: solid;
     color: white;
+    font-size: x-large;
 }
 #antwort{
     position: absolute;
