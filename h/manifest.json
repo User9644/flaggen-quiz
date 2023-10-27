@@ -1,0 +1,9 @@
+{
+  "name": "Flaggen Quiz",
+  "short_name": "Flags",
+  "theme_color": "#303030",
+  "background_color": "#303030",
+  "display": "fullscreen",
+  "scope": "/",
+  "start_url": "flaggenquiz.html"
+}
